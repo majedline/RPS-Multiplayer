@@ -1,0 +1,49 @@
+body{
+    background-color: #000055;
+    color: white;
+}
+
+ /* div{
+    border-style: dotted;
+    border-width: 0.5px;
+}  */
+
+a{
+    color: rgb(108, 178, 236);
+}
+
+.header{
+    text-align: center;
+    margin: 20px;
+}
+
+.main-area{
+    border-width: 1px;
+}
+
+
+.single-button{
+    height: 200px;
+    width: 200px; 
+    margin: 10px;
+}
+
+.single-image{
+    height: 70%;
+    width: 70%;
+    margin: 10px;
+}
+
+
+
+#input-area{
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+}
+
+#score-area{
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+}
+
+
