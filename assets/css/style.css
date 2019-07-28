@@ -15,6 +15,9 @@ a{
 .header{
     text-align: center;
     margin: 20px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    padding: 20px;
 }
 
 .main-area{
@@ -34,16 +37,26 @@ a{
     margin: 10px;
 }
 
-
+.play-image{
+    height: 400px;
+    width: auto;
+    margin: 10px;
+}
 
 #input-area{
     border-style: solid;
-    border-width: 0px 0px 0px 1px;
+    border-width: 0px 0px 0px 0px;
+    margin: auto;
 }
 
 #score-area{
     border-style: solid;
-    border-width: 0px 0px 0px 1px;
+    border-width: 1px 1px 1px 1px;
+    margin: auto;
 }
 
+#result-move{
+  text-align: center;
+  margin: auto;
+}
 

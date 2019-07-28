@@ -14,21 +14,28 @@
 
 <body>
 
-    <div class="header">
-        <h3>Rock–Paper–Scissors</h3>
+    <div class="row header">
+        <div class="col-6">
+
+            <h1>Rock–Paper–Scissors </h1>
+        </div>
+        <div class="col-6">
+            <button id="start-button" class="btn btn-info" type="button">Connect to a Game</button>
+            <h4 id="connect-to-new-game-msg">Lets start, connect to a new game</h4>
+
+        </div>
     </div>
 
     <div class="container-fluid main-area">
 
-
         <div class="row">
-            <div id="view-area" class="col-7">
+            <div id="view-area" class="col-6">
                 <!-- automatically built -->
                 bbb
 
             </div>
 
-            <div id="input-area" class="col-5">
+            <div id="input-area" class="col-6">
 
                 <button type="button" class="btn btn-outline-primary single-button"><img src="assets/images/rock.PNG"
                         class="img-fluid single-image" alt="img-thumbnail"></button>
@@ -39,24 +46,39 @@
             </div>
         </div>
         <div class="row">
-
-            <div class="col-7">
+            <div class="col-6">
+                <br />
                 <div class="input-group mb-3">
-                    <input type="text" id="img-keyword" class="form-control"
-                        placeholder="Enter text here" aria-label="Send"
-                        aria-describedby="basic-addon2">
+                    <input type="text" id="img-keyword" class="form-control" placeholder="Enter text here"
+                        aria-label="Send" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button id="send-button" class="btn btn-info" type="button">Send</button>
                     </div>
                 </div>
             </div>
 
-            <div id="score-area" class="col-5">
-                    xyz
+            <div id="score-area" class="col-6">
+                Status: <span id="who-move"></span>
+                <br />
+                Your Score: <span data-score="0" id="your-score"></span>
+                <br />
+                Other Player Score: <span data-score="0" id="other-score"></span>
+            </div>
+        </div>
 
+        <!-- <div class="row" >
+            <div class="col-4" id="player-move">
+                    <img src="assets/images/rock.PNG" class="img-fluid play-image" alt="img-thumbnail">
             </div>
 
-        </div>
+            <div class="col-4" id="result-move"></div>
+
+            <div class="col-4" id="other-move">
+                    <img src="assets/images/rock.PNG" class="img-fluid play-image" alt="img-thumbnail">
+            </div>
+
+        </div> -->
+
     </div>
 
 
@@ -77,8 +99,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+         <!-- Firebase References -->
+         <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
-    <script src="assets/javascript/connections.js"></script>
+    <script src="assets/javascript/connection.js"></script>
     <script src="assets/javascript/app.js"></script>
 
 </body>
