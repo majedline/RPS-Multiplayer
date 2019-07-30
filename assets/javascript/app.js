@@ -52,11 +52,13 @@ $("#start-button").on("click", function () {
 $("#send-button").on("click", chatClickHandler);
 
 // press enter
-$(document).ready(function (event) {
-    if (event.keyCode == 13) {
-        $("#chat-text").keypress(chatClickHandler);
-    }
+$(document).ready(function () {
+    $('#chat-text').keypress(function (e) {
+        if (e.keyCode == 13)
+            chatClickHandler();
+    });
 });
+
 
 function chatClickHandler() {
     if (playerCreated) {
@@ -113,13 +115,22 @@ database.ref().on("child_added", function (snapshot) {
     if (playerCreated) {
         var play = snapshot.val().play;
 
+        // this is a chat
         if (play.action === "chat") {
             var txt = "[" + play.playerName + " chat] " + play.chatText + "<br/>";
             $("#chat-area").append($("<div>").html(txt));
 
+            // this is a play
         } else if (play.action === "play") {
-            var txt = "[" + play.playerName + " played]  ===>" + play.playerMove + "<br/>";
-            $("#chat-area").append($("<div>").html(txt));
+            var $ptxt = $("<p>").text("[" + play.playerName + " played]  ===>" + play.playerMove + " ");
+            var $img = $("<img>").attr("src", play.playerMoveImage);
+            $img.attr("class", "icon-image");
+
+            $ptxt.append($img);
+            $ptxt.append($("<br>"));
+
+            $("#chat-area").append($("<div>").html($ptxt));
+
 
             if (thePlay != null) {
                 console.log("thePlay: " + JSON.stringify(thePlay.play));
@@ -151,8 +162,9 @@ database.ref().on("child_added", function (snapshot) {
                 }
             }
 
+            // this is a result display
         } else if (play.action === "state") {
-            var txt = "[" + play.playerName + " chat] " + play.chatText + "<br/>";
+            var txt = "[" + play.playerName + " chat] " + play.chatText + "<br/><br/>";
             $("#chat-area").append($("<div>").html(txt));
 
             thePlay = null;
@@ -166,18 +178,3 @@ database.ref().on("child_added", function (snapshot) {
 
 });
 
-/*************************************************** */
-
-
-/************************ */
-function getWinner(p1, p2) {
-
-    if (thePlay.playerMove === play.playerMove) $("#chat-area").append($("<div>").html("**** tie ****"));
-    if (thePlay.playerMove === "R" && play.playerMove === "P") $("#chat-area").append($("<div>").html("**** Other player wins ****"));
-    if (thePlay.playerMove === "R" && play.playerMove === "S") $("#chat-area").append($("<div>").html("**** You win ****"));
-    if (thePlay.playerMove === "P" && play.playerMove === "S") $("#chat-area").append($("<div>").html("**** Other player wins ****"));
-    if (thePlay.playerMove === "P" && play.playerMove === "R") $("#chat-area").append($("<div>").html("**** You win ****"));
-    if (thePlay.playerMove === "S" && play.playerMove === "R") $("#chat-area").append($("<div>").html("**** Other player wins ****"));
-    if (thePlay.playerMove === "S" && play.playerMove === "P") $("#chat-area").append($("<div>").html("**** You win ****"));
-
-}

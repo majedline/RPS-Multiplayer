@@ -60,3 +60,8 @@ a{
   text-align: center;
   margin: auto;
 }
+
+.icon-image{
+    height: 20px;
+    width: auto;
+}
