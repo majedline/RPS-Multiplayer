@@ -74,6 +74,7 @@ function chatClickHandler() {
                     chatText: chatText
                 }
             });
+        $("#chat-text").val("");
     }
 }
 
@@ -180,6 +181,6 @@ database.ref().on("child_added", function (snapshot) {
 
 /********************CLEAR********************* */
 $("#clear-button").on("click", clearChatClickHandler);
-function clearChatClickHandler(){
+function clearChatClickHandler() {
     $("#chat-area").text("");
 }
