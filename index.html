@@ -61,24 +61,22 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-12">
                 <br />
                 <div class="input-group mb-3">
-                    <input type="text" id="chat-text" class="form-control" placeholder="Enter Chat text here"
+                    <input type="text" id="chat-text" class="form-control" placeholder="Enter Chat text here and press enter"
                         aria-label="Send" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button id="send-button" class="btn btn-info" type="button">Send</button>
                     </div>
+                    <div class="input-group-append">
+                            <button id="clear-button" class="btn btn-info" type="button">clear</button>
+                        </div>
+
                 </div>
             </div>
 
-            <div id="score-area" class="col-6">
-                Status: <span id="who-move"></span>
-                <br />
-                Your Score: <span data-score="0" id="your-score"></span>
-                <br />
-                Other Player Score: <span data-score="0" id="other-score"></span>
-            </div>
+
         </div>
 
 

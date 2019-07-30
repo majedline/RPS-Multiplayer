@@ -178,3 +178,8 @@ database.ref().on("child_added", function (snapshot) {
 
 });
 
+/********************CLEAR********************* */
+$("#clear-button").on("click", clearChatClickHandler);
+function clearChatClickHandler(){
+    $("#chat-area").text("");
+}

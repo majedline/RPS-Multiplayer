@@ -65,3 +65,12 @@ a{
     height: 20px;
     width: auto;
 }
+
+#send-button{
+    margin-left: 4px;
+}
+
+
+#clear-button{
+    margin-left: 4px;
+}
