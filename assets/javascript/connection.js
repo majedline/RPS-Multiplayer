@@ -13,4 +13,3 @@
   firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
-  

@@ -17,11 +17,20 @@
     <div class="row header">
         <div class="col-6">
 
-            <h1>Rock–Paper–Scissors </h1>
+            <h1>R-P-S WORLD </h1>
+            <h4 id="connect-to-new-game-msg1">the Best Rock–Paper–Scissors Game</h4>
+
         </div>
         <div class="col-6">
-            <button id="start-button" class="btn btn-info" type="button">Connect to a Game</button>
-            <h4 id="connect-to-new-game-msg">Lets start, connect to a new game</h4>
+
+            <div class="input-group mb-3">
+                <input type="text" id="name-keyword" class="form-control" placeholder="Enter Your Name here"
+                    aria-label="Send" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button id="start-button" class="btn btn-info" type="button">Connect to a Game</button>
+                </div>
+            </div>
+            <h4 id="connect-to-new-game-msg2">Lets start! Add your name & connect to a game!</h4>
 
         </div>
     </div>
@@ -30,26 +39,32 @@
 
         <div class="row">
             <div id="view-area" class="col-6">
-                <!-- automatically built -->
-                bbb
+                <div id="chat-area">
+                    <!-- automatically built -->
 
+                </div>
             </div>
 
             <div id="input-area" class="col-6">
 
-                <button type="button" class="btn btn-outline-primary single-button"><img src="assets/images/rock.PNG"
-                        class="img-fluid single-image" alt="img-thumbnail"></button>
-                <button type="button" class="btn btn-outline-primary single-button"><img src="assets/images/paper.PNG"
-                        class="img-fluid single-image" alt="img-thumbnail"></button>
-                <button type="button" class="btn btn-outline-primary single-button"><img
-                        src="assets/images/Scissors.PNG" class="img-fluid single-image" alt="img-thumbnail"></button>
+                <button id="R-play" type="button" class="btn btn-outline-primary single-button">
+                    <img id="R-img" src="assets/images/rock.PNG" class="img-fluid single-image" alt="img-thumbnail">
+                </button>
+
+                <button id="P-play" type="button" class="btn btn-outline-primary single-button">
+                    <img id="P-img" src="assets/images/paper.PNG" class="img-fluid single-image" alt="img-thumbnail">
+                </button>
+
+                <button id="S-play" type="button" class="btn btn-outline-primary single-button">
+                    <img id="S-img" src="assets/images/scissors.PNG" class="img-fluid single-image" alt="img-thumbnail">
+                </button>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
                 <br />
                 <div class="input-group mb-3">
-                    <input type="text" id="img-keyword" class="form-control" placeholder="Enter text here"
+                    <input type="text" id="chat-text" class="form-control" placeholder="Enter Chat text here"
                         aria-label="Send" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button id="send-button" class="btn btn-info" type="button">Send</button>
@@ -66,18 +81,6 @@
             </div>
         </div>
 
-        <!-- <div class="row" >
-            <div class="col-4" id="player-move">
-                    <img src="assets/images/rock.PNG" class="img-fluid play-image" alt="img-thumbnail">
-            </div>
-
-            <div class="col-4" id="result-move"></div>
-
-            <div class="col-4" id="other-move">
-                    <img src="assets/images/rock.PNG" class="img-fluid play-image" alt="img-thumbnail">
-            </div>
-
-        </div> -->
 
     </div>
 
@@ -99,9 +102,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-         <!-- Firebase References -->
-         <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-         <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
     <script src="assets/javascript/connection.js"></script>
     <script src="assets/javascript/app.js"></script>

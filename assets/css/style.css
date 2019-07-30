@@ -1,3 +1,4 @@
+
 body{
     background-color: #000055;
     color: white;
@@ -26,14 +27,14 @@ a{
 
 
 .single-button{
-    height: 200px;
-    width: 200px; 
+    height: 170px;
+    width: 170px; 
     margin: 10px;
 }
 
 .single-image{
-    height: 70%;
-    width: 70%;
+    height: 60%;
+    width: 60%;
     margin: 10px;
 }
 
@@ -50,8 +51,8 @@ a{
 }
 
 #score-area{
-    border-style: solid;
-    border-width: 1px 1px 1px 1px;
+    border-style: dotted;
+    border-width: 2px 2px 2px 2px;
     margin: auto;
 }
 
@@ -59,4 +60,3 @@ a{
   text-align: center;
   margin: auto;
 }
-
